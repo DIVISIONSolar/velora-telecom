@@ -59,7 +59,7 @@ export default function Home() {
     <main>
 
       {/* ── Hero ── */}
-      <section style={{ padding: '120px 24px 100px', position: 'relative', overflow: 'hidden' }}>
+      <section className="pad-a" style={{ position: 'relative', overflow: 'hidden' }}>
 
         {/* Background grid */}
         <div style={{
@@ -116,9 +116,9 @@ export default function Home() {
 
       {/* ── Stats bar ── */}
       <section style={{ borderTop: '1px solid var(--navy-border)', borderBottom: '1px solid var(--navy-border)', background: 'var(--navy-mid)' }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 24px', display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)' }}>
+        <div className="stats-grid" style={{ maxWidth: 1200, margin: '0 auto', padding: '0 24px' }}>
           {stats.map((s, i) => (
-            <div key={i} style={{ padding: '36px 24px', borderRight: i < 2 ? '1px solid var(--navy-border)' : 'none' }}>
+            <div key={i} style={{ padding: '36px 24px' }}>
               <div style={{ fontSize: '2rem', fontWeight: 900, letterSpacing: '-0.04em', color: 'var(--cyan)' }}>{s.value}</div>
               <div style={{ fontWeight: 700, fontSize: '0.95rem', marginTop: 4 }}>{s.label}</div>
               <div style={{ color: 'var(--slate)', fontSize: '0.8rem', marginTop: 2 }}>{s.sub}</div>
@@ -128,7 +128,7 @@ export default function Home() {
       </section>
 
       {/* ── Why Velora ── */}
-      <section className="section" style={{ padding: '96px 24px' }}>
+      <section className="section pad-b">
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div className="eyebrow" style={{ marginBottom: 16 }}>Why it matters</div>
           <h2 style={{ fontSize: 'clamp(1.8rem, 3vw, 2.6rem)', fontWeight: 800, letterSpacing: '-0.03em', margin: '0 0 56px', maxWidth: 520 }}>
@@ -147,7 +147,7 @@ export default function Home() {
       </section>
 
       {/* ── Speed tiers ── */}
-      <section style={{ padding: '0 24px 96px' }}>
+      <section className="pad-c">
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div className="eyebrow" style={{ marginBottom: 16 }}>Service tiers under consideration</div>
           <h2 style={{ fontSize: 'clamp(1.8rem, 3vw, 2.6rem)', fontWeight: 800, letterSpacing: '-0.03em', margin: '0 0 12px' }}>
@@ -184,10 +184,10 @@ export default function Home() {
       </section>
 
       {/* ── How it works ── */}
-      <section style={{ padding: '0 24px 96px' }}>
+      <section className="pad-c">
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-          <div className="card" style={{ padding: '64px 56px', background: 'var(--navy-mid)' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'center', flexWrap: 'wrap' }}>
+          <div className="card roadmap-card" style={{ background: 'var(--navy-mid)' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 48, alignItems: 'center' }}>
               <div>
                 <div className="eyebrow" style={{ marginBottom: 16 }}>The roadmap</div>
                 <h2 style={{ fontSize: 'clamp(1.6rem, 2.5vw, 2.2rem)', fontWeight: 800, letterSpacing: '-0.03em', margin: '0 0 24px' }}>
@@ -223,9 +223,9 @@ export default function Home() {
       </section>
 
       {/* ── CTA ── */}
-      <section style={{ padding: '0 24px 120px' }}>
+      <section className="pad-d">
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-          <div style={{ textAlign: 'center', padding: '80px 32px', background: 'linear-gradient(135deg, rgba(0,194,255,0.08), rgba(0,194,255,0.03))', border: '1px solid rgba(0,194,255,0.2)', borderRadius: 24 }}>
+          <div style={{ textAlign: 'center', padding: 'clamp(48px, 10vw, 80px) clamp(20px, 5vw, 32px)', background: 'linear-gradient(135deg, rgba(0,194,255,0.08), rgba(0,194,255,0.03))', border: '1px solid rgba(0,194,255,0.2)', borderRadius: 24 }}>
             <div className="eyebrow" style={{ marginBottom: 16 }}>Be part of it</div>
             <h2 style={{ fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 900, letterSpacing: '-0.04em', margin: '0 0 16px' }}>
               Ready for real broadband?

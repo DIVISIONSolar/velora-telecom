@@ -53,7 +53,7 @@ a: 'Yes. Velora intends to support IPv6 throughout the network. IPv6 provides a 
 export default function FAQ() {
   return (
     <main>
-      <section style={{ padding: '96px 24px 120px' }}>
+      <section className="pad-g">
         <div style={{ maxWidth: 800, margin: '0 auto' }}>
           <div className="eyebrow" style={{ marginBottom: 16 }}>Questions &amp; answers</div>
           <h1 style={{ fontSize: 'clamp(2.2rem, 4vw, 3rem)', fontWeight: 900, letterSpacing: '-0.03em', margin: '0 0 64px' }}>

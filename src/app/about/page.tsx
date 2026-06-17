@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function About() {
   return (
     <main>
-      <section style={{ padding: '96px 24px 80px' }}>
+      <section className="pad-f">
         <div style={{ maxWidth: 800, margin: '0 auto' }}>
           <div className="eyebrow" style={{ marginBottom: 16 }}>About Velora</div>
 
@@ -74,7 +74,7 @@ export default function About() {
               borderTop: '1px solid var(--navy-border)',
               paddingTop: 48,
               display: 'grid',
-              gridTemplateColumns: '1fr 1fr',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
               gap: 32,
             }}
           >
@@ -124,7 +124,7 @@ export default function About() {
             ))}
           </div>
 
-          <div style={{ marginTop: 56, display: 'flex', gap: 12 }}>
+          <div style={{ marginTop: 56, display: 'flex', gap: 12, flexWrap: 'wrap' }}>
             <Link href="/waitlist" className="btn-primary">
               Join the waitlist
             </Link>

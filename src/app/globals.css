@@ -135,3 +135,105 @@ body {
   padding: 4px 10px;
   border-radius: 999px;
 }
+
+/* ── Responsive section padding utilities ── */
+.pad-a { padding: 120px 24px 100px; }
+.pad-b { padding: 96px 24px; }
+.pad-c { padding: 0 24px 96px; }
+.pad-d { padding: 0 24px 120px; }
+.pad-f { padding: 96px 24px 80px; }
+.pad-g { padding: 96px 24px 120px; }
+
+@media (max-width: 640px) {
+  .pad-a { padding: 84px 20px 56px; }
+  .pad-b { padding: 56px 20px; }
+  .pad-c { padding: 0 20px 56px; }
+  .pad-d { padding: 0 20px 72px; }
+  .pad-f { padding: 64px 20px 48px; }
+  .pad-g { padding: 64px 20px 72px; }
+}
+
+/* Roadmap / "how it works" card */
+.roadmap-card { padding: 64px 56px; }
+@media (max-width: 768px) {
+  .roadmap-card { padding: 36px 24px; }
+}
+
+/* ── Stats bar: 3 cols on desktop, stacks on mobile ── */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.stats-grid > div:not(:last-child) {
+  border-right: 1px solid var(--navy-border);
+}
+@media (max-width: 640px) {
+  .stats-grid { grid-template-columns: 1fr; }
+  .stats-grid > div:not(:last-child) {
+    border-right: none;
+    border-bottom: 1px solid var(--navy-border);
+  }
+}
+
+/* ── Nav: desktop links vs. mobile hamburger ── */
+.nav-logo-img {
+  height: 26px;
+  width: auto;
+  display: block;
+}
+@media (max-width: 400px) {
+  .nav-logo-img { height: 20px; }
+}
+.nav-links-desktop {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+.nav-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+  padding: 6px;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .nav-links-desktop { display: none; }
+  .nav-hamburger { display: flex; }
+}
+.nav-mobile-menu {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--navy-border);
+  background: var(--navy);
+  padding: 8px 24px 24px;
+}
+.nav-mobile-menu .nav-link {
+  padding: 14px 4px;
+  font-size: 1rem;
+  border-bottom: 1px solid var(--navy-border);
+}
+.nav-mobile-menu .btn-primary {
+  margin-top: 16px;
+  justify-content: center;
+}
+
+/* ── Footer ── */
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+.footer-links {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+@media (max-width: 640px) {
+  .footer-inner { flex-direction: column; text-align: center; }
+  .footer-links { justify-content: center; gap: 20px; }
+}

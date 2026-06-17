@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function Contact() {
   return (
     <main>
-      <section style={{ padding: '96px 24px 120px' }}>
+      <section className="pad-g">
         <div style={{ maxWidth: 600, margin: '0 auto' }}>
           <div className="eyebrow" style={{ marginBottom: 16 }}>Get in touch</div>
           <h1 style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', fontWeight: 900, letterSpacing: '-0.03em', margin: '0 0 16px' }}>
